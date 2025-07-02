@@ -6,8 +6,10 @@
         <th style="display:none">Id</th>
         <th>#</th>        
         <th>Name</th>
-        <th>Nickname</th>        
-        <th></th>
+        <th>Nickname</th>
+        <th>Position</th>        
+        <th>Rating</th>                   
+        <th>Player Info</th>
       </tr>
       </thead>
       <tbody>
@@ -16,8 +18,10 @@
                 <td style="display:none">{{person.id}}</td>
                 <td>{{$index + 1}}</td>                
                 <td>{{person.name}}</td>
-                <td>{{person.userName}}</td>                
-                <td><button type="button" class="btn btn-primary" [routerLink]="['../person', person.id]" data-mdb-ripple-init>Person Info</button></td>               
+                <td>{{person.userName}}</td>
+                <td>{{person.position}}</td>                 
+                <td>{{person.rating}}</td>                                  
+                <td><button type="button" class="btn btn-primary" [routerLink]="['../person', person.id]" data-mdb-ripple-init>Player Info</button></td>               
               </tr>
         }        
       </tbody>
